@@ -1,0 +1,10 @@
+# Project
+.idea/
+
+# Generated output
+*.pyc
+*.png
+*.tokens
+*Lexer.py
+*Parser.py
+*Listener.py
