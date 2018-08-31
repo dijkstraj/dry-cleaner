@@ -10,7 +10,8 @@ Inspired by [SongSim](https://colinmorris.github.io/SongSim).
 
 _Please note that (for now) this only works for Typescript code_
 
-* Install [ANTLR4](https://github.com/antlr/antlr4) and Python 2
-* Run `antlr4 -Dlanguage=Python2 Code.g4` to generate the code parser
-* Run `python drycleaner.py ~/Projects/some-project/src/**/*.ts` to generate some output
+* Install [ANTLR4](https://github.com/antlr/antlr4) and Python 3
+* Run `pip3 install -r requirements.txt` to install the Python runtime of ANTLR
+* Run `antlr4 -Dlanguage=Python3 Code.g4` to generate the code parser
+* Run `python drycleaner.py ~/Projects/some-project/src .ts` to generate some output
 

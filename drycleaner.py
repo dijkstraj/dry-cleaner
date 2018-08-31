@@ -27,7 +27,7 @@ def token_color(max_length, token):
 
 
 def render_file_sim(filename):
-    print path.basename(filename)
+    print(path.basename(filename))
 
     input = FileStream(filename, 'utf-8')
     lexer = CodeLexer(input)
@@ -53,13 +53,13 @@ def render_file_sim(filename):
     image.save(path.basename(filename) + '.png', 'PNG')
 
 
-def process_files(fileglob):
-    for filename in glob.iglob(fileglob):
+def process_files(rootDir, fileExtension):
+    for filename in glob.iglob(path.join(rootDir, '**/*' + fileExtension), recursive=True):
         render_file_sim(filename)
 
 
 def main(argv):
-    process_files(argv[1])
+    process_files(argv[1], argv[2])
 
 
 if __name__ == '__main__':
